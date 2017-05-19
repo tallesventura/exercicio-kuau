@@ -1,0 +1,13 @@
+{
+  "name": "exercicio-kuau",
+  "description": "Exercício para seleção de estágio da KUAU",
+  "version": "0.0.0",
+  "homepage": "https://github.com/tallesventura/exercicio-kuau",
+  "private": true,
+  "dependencies": {
+    "angular": "1.6.x",
+    "angular-resource": "1.6.x",
+    "angular-route": "1.6.x",
+    "bootstrap": "3.3.x"
+  }
+}
