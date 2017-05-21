@@ -1,0 +1,46 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="panel panel-primary">
+				<div class="panel-heading">Buscador</div>
+				<div class="panel-body">
+					<div class="input-group">
+			    		<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+			    		<input ng-model="$ctrl.query" ng-change="$ctrl.executarQuery()" 
+			    				type="text" class="form-control" placeholder="Username">
+					</div>
+					<div class="resultados">
+						<p>Resultados: <span class="label label-default">{{$ctrl.total}}</span></p>
+					</div>	
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-3">
+
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<p>Resultados</p>
+				</div>
+				<div class="panel-body">
+					<div class="list-group">
+						<a class="list-group-item" ng-repeat="usuario in $ctrl.usuarios"
+							href="#!/usuarios/{{usuario.login}}"> {{usuario.login}} </a>
+					</div>
+				</div>
+				<div class="panel-footer">
+					<p>Página {{$ctrl.pagAtual}} de {{$ctrl.numPaginas}}</p>
+					<div class="btn-group">
+						<button id="btnPrim" type="button" class="btn btn-primary" ng-click="$ctrl.irParaPrimeira()">Primeira</button>
+						<button id="btnAnt" type="button" class="btn btn-primary" ng-click="$ctrl.irParaAnterior()">Anterior</button>
+						<button id="btnProx" type="button" class="btn btn-primary" ng-click="$ctrl.irParaProxima()">Próxima</button>
+						<button id="btnUlt" type="button" class="btn btn-primary" ng-click="$ctrl.irParaUltima()">Última</button>
+					</div>
+				</div>
+			</div>
+			
+			
+			
+		</div>
+	</div>
+</div>

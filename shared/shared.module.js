@@ -1,0 +1,1 @@
+angular.module('shared', ['shared.usuario', 'shared.pesquisa']);

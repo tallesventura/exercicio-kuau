@@ -1,0 +1,17 @@
+.avatar {
+	height: 100px;
+	width: 100px;
+}
+
+.resultados {
+	margin-top: 10px;
+	padding: 3px;
+}
+
+.resultados p {
+	padding: 2px;
+}
+
+.lbl {
+	font-weight: bold;
+}

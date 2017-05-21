@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="githubApp">
+<head>
+	<meta charset="utf-8">
+	<title> Buscador Github </title>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+	<link rel="stylesheet" href="app.css">
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/lodash/lodash.js"></script>
+    <script src="bower_components/restangular/src/restangular.js"></script>
+	<script src="app.module.js"></script>
+	<script src="app.config.js"></script>
+	<script src="shared/shared.module.js"></script>
+	<script src="shared/usuario/usuario.module.js"></script>
+	<script src="shared/usuario/usuario.service.js"></script>
+	<script src="shared/pesquisa/pesquisa.module.js"></script>
+	<script src="shared/pesquisa/pesquisa.service.js"></script>
+	<script src="lista-usuarios/lista-usuarios.module.js"></script>
+	<script src="lista-usuarios/lista-usuarios.component.js"></script>
+	<script src="detalhes-usuario/detalhes-usuario.module.js"></script>
+	<script src="detalhes-usuario/detalhes-usuario.component.js"></script>
+
+</head>
+<body>
+
+	<div ng-view></div>
+
+</body>
+</html>

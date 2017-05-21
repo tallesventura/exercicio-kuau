@@ -1,0 +1,57 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="thumbnail">
+				<a href="{{$ctrl.usuario.html_url}}">
+					<img class="img-rounded img-responsive" ng-src="{{$ctrl.usuario.avatar_url}}" alt="Avatar">
+					<div class="caption"><h4 class="text-center">{{$ctrl.usuario.login}}</h4> </div>		
+				</a>
+			</div>
+			
+			
+		</div>
+
+		<div class="col-md-9">
+
+			<div class="panel panel-primary">
+				<div class="panel-heading">Informações pessoais</div>
+				<div class="panel-body">
+					<div class="col-md-6">
+						<p><span class="lbl">Nome: </span>{{ $ctrl.usuario.name }}</p>
+					</div>
+					<div class="col-md-6">	
+						<p><span class="lbl">Email: </span>{{ $ctrl.usuario.email }}</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="panel panel-primary">
+				<div class="panel-heading">Social</div>
+				<div class="panel-body">
+					<div class="col-md-6">
+						<p><span class="lbl">Followers: </span>{{ $ctrl.usuario.followers }}</p>
+					</div>
+					<div class="col-md-6">
+						<p><span class="lbl">Following: </span>{{ $ctrl.usuario.following }}</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-primary">
+				<div class="panel-heading">Datas</div>
+				<div class="panel-body">
+					<div class="col-md-6">
+						<p><span class="lbl">Data de Cadastro: </span>{{ $ctrl.usuario.created_at }}</p>
+					</div>
+					<div class="col-md-6">
+						<p><span class="lbl">Última atualização: </span>{{ $ctrl.usuario.updated_at }}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+
+	
+</div>
