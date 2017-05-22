@@ -14,7 +14,7 @@ angular.module('listaUsuarios').
 					next: "",
 					last: ""
 				};
-				this.constTimeout = 2000;		
+				this.constTimeout = 1350;	
 
 				var instancia = this;
 
@@ -83,7 +83,8 @@ angular.module('listaUsuarios').
 
 				this.pesquisar = function(){
 
-					instancia.resetaLinks();			
+					instancia.resetaLinks();
+								
 					Restangular.oneUrl('usuarios', instancia.url).get({per_page:100}).
 						then(
 							function(response){
@@ -104,6 +105,7 @@ angular.module('listaUsuarios').
 									instancia.atualizaLinks(strLinks);		
 								}
 								instancia.atualizaBtnsNavegacao();	
+								$('#icCarregando').addClass('hidden');
 							},
 							function(reason){
 								alert("Requisições excedidas. Espere alguns segundos e tente novamente");
@@ -126,6 +128,7 @@ angular.module('listaUsuarios').
 				this.dispararTimer = function(){
 					clearTimeout(instancia.timer);
 					instancia.timer = setTimeout(instancia.executarQuery, instancia.constTimeout);
+					$('#icCarregando').removeClass('hidden');
 				}
 
 				$('#btnPrim').prop('disabled', true);

@@ -1,6 +1,6 @@
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-3">
+		<div class="col-xs-12">
 			<div class="panel panel-primary">
 				<div class="panel-heading">Buscador</div>
 				<div class="panel-body">
@@ -9,14 +9,22 @@
 			    		<input ng-model="$ctrl.query" ng-keyup="$ctrl.dispararTimer()" 
 			    				type="text" class="form-control" placeholder="Username">
 					</div>
-					<div class="resultados">
-						<p>Resultados: <span class="label label-default">{{$ctrl.total}}</span></p>
-					</div>	
+					<div class="row">
+						<div class="resultados col-xs-3">
+							<p>Resultados: <span class="label label-default">{{$ctrl.total}}</span></p>
+						</div>
+						<div class="carregamento col-xs-9">
+							<span id="icCarregando" class="fa fa-spinner fa-pulse fa-3x fa-fw hidden"></span>
+							<span class="sr-only">Carregando...</span>
+						</div>
+					</div>
+					
+					
 				</div>
 			</div>
 		</div>
 
-		<div class="col-md-3">
+		<div class="col-xs-12">
 
 			<div class="panel panel-primary">
 				<div class="panel-heading">
@@ -25,7 +33,10 @@
 				<div class="panel-body">
 					<div class="list-group">
 						<a class="list-group-item" ng-repeat="usuario in $ctrl.usuarios"
-							href="#!/usuarios/{{usuario.login}}"> {{usuario.login}} </a>
+							href="#!/usuarios/{{usuario.login}}"> 
+								<img ng-src="{{usuario.avatar_url}}" class="foto-lista">
+								{{usuario.login}}
+						</a>
 					</div>
 				</div>
 				<div class="panel-footer">
