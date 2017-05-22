@@ -6,7 +6,7 @@
 				<div class="panel-body">
 					<div class="input-group">
 			    		<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-			    		<input ng-model="$ctrl.query" ng-change="$ctrl.executarQuery()" 
+			    		<input ng-model="$ctrl.query" ng-keyup="$ctrl.dispararTimer()" 
 			    				type="text" class="form-control" placeholder="Username">
 					</div>
 					<div class="resultados">

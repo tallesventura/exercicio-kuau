@@ -13,7 +13,8 @@ angular.module('listaUsuarios').
 					prev: "",
 					next: "",
 					last: ""
-				};				
+				};
+				this.constTimeout = 2000;		
 
 				var instancia = this;
 
@@ -118,9 +119,13 @@ angular.module('listaUsuarios').
 							getRestangularUrl() + "?q=" + instancia.query + 
 							"+in:login";
 
-					if(instancia.query.length >= 2){
-						instancia.pesquisar();
-					}
+					instancia.pesquisar();
+				}
+
+
+				this.dispararTimer = function(){
+					clearTimeout(instancia.timer);
+					instancia.timer = setTimeout(instancia.executarQuery, instancia.constTimeout);
 				}
 
 				$('#btnPrim').prop('disabled', true);
